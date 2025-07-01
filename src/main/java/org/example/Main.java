@@ -92,8 +92,11 @@ public class Main{
             System.out.println("");
 
             letterGradeCounter(letterGradeCount, numericToLetterGrader(currentGrade));
-            if (currentGrade >= highestGrade){
+            if (currentGrade > highestGrade){
                 highestGrade = currentGrade;
+                highestGradesIdx.clear();
+                highestGradesIdx.add(i);
+            } else if (currentGrade == highestGrade) {
                 highestGradesIdx.add(i);
             }
         }
